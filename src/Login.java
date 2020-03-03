@@ -9,7 +9,6 @@ public class Login {
         // Define the web driver
         System.setProperty("webdriver.chrome.driver","C:\\Users\\khadk\\Desktop\\Software\\chromeDriver80\\chromedriver.exe");
         WebDriver driver=new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
         // Opening the browser and navigating to the URL
         driver.get("http://sdettraining.com/trguitransactions/AccountManagement.aspx");
 
@@ -17,7 +16,7 @@ public class Login {
         driver.findElement(By.name("ctl00$MainContent$txtUserName")).sendKeys("tim@testemail.com");
 
         //Supplying information to the password field
-        driver.findElement(By.name("ctl00$MainContent$txtPassword")).sendKeys("trpass1");
+        driver.findElement(By.name("ctl00$MainContent$txtPassword")).sendKeys("trpass");
 
         //logging in by clicking log in button
         driver.findElement(By.name("ctl00$MainContent$btnLogin")).click();
